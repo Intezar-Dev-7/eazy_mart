@@ -65,7 +65,7 @@ class ProductDetailsScreen extends StatelessWidget {
                     height: TSizes.spaceBtwItems,
                   ),
                   ReadMoreText(
-                    'This is the product description for Blue Nike sleeve less vest. Ther are more things that can be added But will do that work later onn , hgdfsgfjgsdgfjhsdgfsdgfsdhfjsdgf',
+                    'This is the product description for Blue Nike sleeve less vest. Ther are more things that can be added But will do that work later on, This is the product discription for The nike shoes ',
                     trimLines: 2,
                     trimMode: TrimMode.Line,
                     trimCollapsedText: 'Show more',

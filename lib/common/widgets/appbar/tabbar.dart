@@ -16,17 +16,13 @@ class TTabBar extends StatelessWidget implements PreferredSizeWidget {
 
     return Material(
       color: dark ? TColors.black : TColors.white,
-      child: Padding(
-        padding: const EdgeInsets.only(left: 1),
-        child: Center(
-          child: TabBar(
-            tabs: tabs,
-            isScrollable: true,
-            indicatorColor: TColors.primary,
-            labelColor: dark ? TColors.white : TColors.primary,
-            unselectedLabelColor: TColors.darkGrey,
-          ),
-        ),
+      child: TabBar(
+        tabs: tabs,
+        isScrollable: true,
+        tabAlignment: TabAlignment.start,
+        indicatorColor: TColors.primary,
+        labelColor: dark ? TColors.white : TColors.primary,
+        unselectedLabelColor: TColors.darkGrey,
       ),
     );
   }

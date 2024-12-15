@@ -1,4 +1,4 @@
-import 'package:easy_mart/features/authentication/screens/password_configuration/forgot_passowrd.dart';
+import 'package:easy_mart/features/authentication/screens/password_configuration/forgot_password.dart';
 import 'package:easy_mart/features/authentication/screens/signup/signup.dart';
 import 'package:easy_mart/navigation_menu.dart';
 import 'package:easy_mart/utils/constants/sizes.dart';
@@ -7,8 +7,16 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
-class TLoginForm extends StatelessWidget {
+class TLoginForm extends StatefulWidget {
   const TLoginForm({super.key});
+
+  @override
+  State<TLoginForm> createState() => _TLoginFormState();
+}
+
+class _TLoginFormState extends State<TLoginForm> {
+  bool _isRemberMeChecked = false; // Tracks the checkbox state
+  bool _isPasswordVisible = false; // Tracks password visibility
 
   @override
   Widget build(BuildContext context) {
@@ -31,10 +39,21 @@ class TLoginForm extends StatelessWidget {
             ),
             // Password
             TextFormField(
+              obscureText: !_isPasswordVisible, // toggles passowrd visibility
               decoration: InputDecoration(
-                  prefixIcon: Icon(Iconsax.password_check),
-                  labelText: TTexts.password,
-                  suffixIcon: Icon(Iconsax.eye_slash)),
+                prefixIcon: Icon(Iconsax.password_check),
+                labelText: TTexts.password,
+                suffixIcon: IconButton(
+                  icon: Icon(
+                    _isPasswordVisible ? Iconsax.eye : Iconsax.eye_slash,
+                  ),
+                  onPressed: () {
+                    setState(() {
+                      _isPasswordVisible = !_isPasswordVisible;
+                    });
+                  },
+                ),
+              ),
             ),
             SizedBox(
               height: TSizes.spaceBtwInputFields / 2,
@@ -47,13 +66,19 @@ class TLoginForm extends StatelessWidget {
                 // Remeber me
                 Row(
                   children: [
-                    Checkbox(value: true, onChanged: (value) {}),
+                    Checkbox(
+                        value: _isRemberMeChecked,
+                        onChanged: (value) {
+                          setState(() {
+                            _isRemberMeChecked = value!;
+                          });
+                        }),
                     const Text(TTexts.rememberMe),
                   ],
                 ),
                 // Forgot Password
                 TextButton(
-                  onPressed: () => Get.to(() => const ForgotPassword()),
+                  onPressed: () => Get.to(() => const ForgotPasswordScreen()),
                   child: const Text(TTexts.forgotPassword),
                 ),
               ],

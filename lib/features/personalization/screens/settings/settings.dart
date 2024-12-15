@@ -3,9 +3,11 @@ import 'package:easy_mart/common/widgets/custom_shapes/containers/primary_header
 import 'package:easy_mart/common/widgets/list_tiles/settings_tile_menu.dart';
 import 'package:easy_mart/common/widgets/list_tiles/user_profile_tile.dart';
 import 'package:easy_mart/common/widgets/texts/section_heading.dart';
+import 'package:easy_mart/features/authentication/screens/login/login.dart';
 import 'package:easy_mart/features/personalization/screens/addresses/address.dart';
 import 'package:easy_mart/features/personalization/screens/profile/widget/profile.dart';
 import 'package:easy_mart/features/shop/screens/cart/cart.dart';
+import 'package:easy_mart/features/shop/screens/notification/notification.dart';
 import 'package:easy_mart/features/shop/screens/order/order.dart';
 import 'package:easy_mart/utils/constants/colors.dart';
 import 'package:easy_mart/utils/constants/sizes.dart';
@@ -74,7 +76,7 @@ class SettingsScreen extends StatelessWidget {
                   TSettingsMenuTile(
                       icon: Iconsax.notification,
                       title: 'Notifications',
-                      onTap: () {}),
+                      onTap: () => Get.to(() => NotificationScreen())),
                   TSettingsMenuTile(
                       icon: Iconsax.security_card,
                       title: 'Account Privacy',
@@ -105,7 +107,8 @@ class SettingsScreen extends StatelessWidget {
                   SizedBox(
                       width: 180,
                       child: OutlinedButton(
-                          onPressed: () {}, child: Text('Logout'))),
+                          onPressed: () => Get.to(() => LoginScreen()),
+                          child: Text('Logout'))),
                   const SizedBox(height: TSizes.spaceBtwSections * 2.5)
                 ],
               ),

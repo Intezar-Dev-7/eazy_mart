@@ -87,21 +87,11 @@ class StoreScreen extends StatelessWidget {
                 /// Tabs
                 bottom: const TTabBar(
                   tabs: [
-                    Tab(
-                      child: Text('Sports'),
-                    ),
-                    Tab(
-                      child: Text('Furniture'),
-                    ),
-                    Tab(
-                      child: Text('Electronic'),
-                    ),
-                    Tab(
-                      child: Text('Clothes'),
-                    ),
-                    Tab(
-                      child: Text('Cosmestics'),
-                    ),
+                    Tab(child: Text('Sports')),
+                    Tab(child: Text('Furnitures')),
+                    Tab(child: Text('Electronics')),
+                    Tab(child: Text('Clothes')),
+                    Tab(child: Text('Cosmestics')),
                   ],
                 ),
               )

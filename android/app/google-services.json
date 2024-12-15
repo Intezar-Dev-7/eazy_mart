@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "936453325584",
+    "project_id": "eazymart-3fac9",
+    "storage_bucket": "eazymart-3fac9.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:936453325584:android:07edde2f171a7551445b95",
+        "android_client_info": {
+          "package_name": "com.example.eazy_mart"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1JqO7bz2TtmUCK5gPwcQC6btWmhUJjxk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

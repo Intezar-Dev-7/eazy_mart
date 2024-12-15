@@ -1,10 +1,12 @@
 import 'package:easy_mart/common/widgets/appbar/appbar.dart';
 import 'package:easy_mart/common/widgets/image/t_circular_image.dart';
 import 'package:easy_mart/common/widgets/texts/section_heading.dart';
+import 'package:easy_mart/features/authentication/screens/onBoarding/onboarding.dart';
 import 'package:easy_mart/features/personalization/screens/profile/widget/profile_menu.dart';
 import 'package:easy_mart/utils/constants/image_strings.dart';
 import 'package:easy_mart/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -114,15 +116,39 @@ class ProfileScreen extends StatelessWidget {
               const SizedBox(
                 height: TSizes.spaceBtwItems,
               ),
-              Center(
-                child: SizedBox(
-                  width: 180,
-                  child: OutlinedButton(
-                    onPressed: () {},
-                    child: const Text(
-                      'Close account',
-                    ),
-                  ),
+              OutlinedButton(
+                onPressed: () {
+                  // Show confirmation dialog
+                  showDialog(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return AlertDialog(
+                        title: const Text('Close Account'),
+                        content: const Text(
+                            'Are you sure you want to close your account? This action cannot be undone.'),
+                        actions: [
+                          // Cancel Button
+                          TextButton(
+                            onPressed: () {
+                              Navigator.of(context).pop(); // Close the dialog
+                            },
+                            child: const Text('Cancel'),
+                          ),
+                          // Confirm Button
+                          TextButton(
+                            onPressed: () => Get.to(() => OnBoardingScreen()),
+                            child: const Text(
+                              'Confirm',
+                              style: TextStyle(color: Colors.red),
+                            ),
+                          ),
+                        ],
+                      );
+                    },
+                  );
+                },
+                child: const Text(
+                  'Close account',
                 ),
               ),
             ],

@@ -27,14 +27,17 @@ class TOrdersList extends StatelessWidget {
             Row(
               children: [
                 /// Icon --1
-                Icon(Iconsax.ship),
+                Icon(
+                  Iconsax.ship,
+                  semanticLabel: 'Shipping Icon',
+                ),
                 SizedBox(width: TSizes.spaceBtwItems / 2),
-                SizedBox(height: 190),
+                SizedBox(height: 60),
 
                 /// Status & Date --2
                 Expanded(
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       Text('Processing',
@@ -53,7 +56,7 @@ class TOrdersList extends StatelessWidget {
               ],
             ),
 
-            const SizedBox(height: TSizes.spaceBtwItems),
+            // const SizedBox(height: TSizes.spaceBtwItems),
 
             /// Row -- 2
             Row(
@@ -68,8 +71,8 @@ class TOrdersList extends StatelessWidget {
                       /// Status & Date --2
                       Expanded(
                         child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisSize: MainAxisSize.min,
-                          mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             Text('Order',
                                 style: Theme.of(context).textTheme.labelMedium),
@@ -93,11 +96,11 @@ class TOrdersList extends StatelessWidget {
                       Expanded(
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
-                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text('Shipping Date',
                                 style: Theme.of(context).textTheme.labelMedium),
-                            Text('08, Feb, 2020',
+                            Text('03, Feb, 2025',
                                 style: Theme.of(context).textTheme.titleMedium),
                           ],
                         ),

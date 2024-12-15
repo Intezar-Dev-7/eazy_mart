@@ -1,5 +1,5 @@
 import 'package:easy_mart/common/widgets/success_screen/success_screen.dart';
-import 'package:easy_mart/features/authentication/screens/login/login.dart';
+import 'package:easy_mart/features/shop/screens/home/home.dart';
 import 'package:easy_mart/utils/constants/image_strings.dart';
 import 'package:easy_mart/utils/constants/sizes.dart';
 import 'package:easy_mart/utils/constants/text_strings.dart';
@@ -18,7 +18,7 @@ class VerifyEmailScreen extends StatelessWidget {
         automaticallyImplyLeading: false,
         actions: [
           IconButton(
-            onPressed: () => Get.offAll(() => const LoginScreen()),
+            onPressed: () => Get.offAll(() => const HomeScreen()),
             icon: const Icon(CupertinoIcons.clear),
           ),
         ],
@@ -74,7 +74,7 @@ class VerifyEmailScreen extends StatelessWidget {
                       title: TTexts.yourAccountCreatedTitle,
                       subTitle: TTexts.yourAccountCreatedSubTitle,
                       onPressed: () => Get.to(
-                        () => const LoginScreen(),
+                        () => const HomeScreen(),
                       ),
                     ),
                   ),
