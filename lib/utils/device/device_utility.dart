@@ -2,7 +2,8 @@ import 'dart:io'; // For checking the platform and Internet address
 import 'package:flutter/foundation.dart'; // For checking the platform
 import 'package:flutter/material.dart'; // For UI components
 import 'package:flutter/services.dart'; // For controlling system UI (e.g., status bar, haptic feedback)
-import 'package:get/get.dart'; // For state management and other utilities
+import 'package:get/get.dart';
+// For state management and other utilities
 import 'package:url_launcher/url_launcher_string.dart'; // For launching URLs
 
 // Utility class for device-related operations

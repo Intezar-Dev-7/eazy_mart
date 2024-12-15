@@ -6,7 +6,7 @@ import 'package:easy_mart/features/authentication/screens/login/widgets/login_he
 import 'package:easy_mart/utils/constants/sizes.dart';
 import 'package:easy_mart/utils/constants/text_strings.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:get/get_utils/get_utils.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});

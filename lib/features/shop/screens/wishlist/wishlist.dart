@@ -6,6 +6,7 @@ import 'package:easy_mart/features/shop/screens/home/home.dart';
 import 'package:easy_mart/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
 import 'package:iconsax/iconsax.dart';
 
 class WishlistScreen extends StatelessWidget {

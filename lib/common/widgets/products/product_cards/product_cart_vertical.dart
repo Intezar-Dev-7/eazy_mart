@@ -11,7 +11,8 @@ import 'package:easy_mart/utils/constants/image_strings.dart';
 import 'package:easy_mart/utils/constants/sizes.dart';
 import 'package:easy_mart/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:get/get_core/get_core.dart';
+import 'package:get/get_navigation/get_navigation.dart';
 import 'package:iconsax/iconsax.dart';
 
 class TProductCartVertical extends StatelessWidget {

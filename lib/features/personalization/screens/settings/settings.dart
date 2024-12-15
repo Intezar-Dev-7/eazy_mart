@@ -4,6 +4,8 @@ import 'package:easy_mart/common/widgets/list_tiles/settings_tile_menu.dart';
 import 'package:easy_mart/common/widgets/list_tiles/user_profile_tile.dart';
 import 'package:easy_mart/common/widgets/texts/section_heading.dart';
 import 'package:easy_mart/features/authentication/screens/login/login.dart';
+import 'package:easy_mart/features/personalization/screens/HelpCenter/help_center.dart';
+
 import 'package:easy_mart/features/personalization/screens/addresses/address.dart';
 import 'package:easy_mart/features/personalization/screens/profile/widget/profile.dart';
 import 'package:easy_mart/features/shop/screens/cart/cart.dart';
@@ -77,30 +79,18 @@ class SettingsScreen extends StatelessWidget {
                       icon: Iconsax.notification,
                       title: 'Notifications',
                       onTap: () => Get.to(() => NotificationScreen())),
+
                   TSettingsMenuTile(
-                      icon: Iconsax.security_card,
-                      title: 'Account Privacy',
-                      onTap: () {}),
-                  TSettingsMenuTile(
-                      icon: Iconsax.headphone, title: 'Help Center'),
+                      icon: Iconsax.headphone,
+                      title: 'Help Center',
+                      onTap: () => Get.to(
+                            () => HelpCenterScreen(),
+                          )),
 
                   /// App Settings
                   SizedBox(
                     height: TSizes.spaceBtwSections,
                   ),
-                  TSectionHeading(
-                      title: 'App Settings', showActionButton: false),
-                  SizedBox(height: TSizes.spaceBtwItems),
-
-                  ///
-                  TSettingsMenuTile(
-                      icon: Iconsax.location,
-                      title: 'Geolocation',
-                      trailing: Switch(value: true, onChanged: (value) {})),
-                  TSettingsMenuTile(
-                      icon: Iconsax.security_user,
-                      title: 'Safe Mode',
-                      trailing: Switch(value: true, onChanged: (value) {})),
 
                   /// Logout Button
                   const SizedBox(height: TSizes.spaceBtwSections),
