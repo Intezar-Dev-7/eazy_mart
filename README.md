@@ -15,7 +15,7 @@ The **Ecommerce App** is a modern shopping platform offering seamless user exper
 
 ## Tech Stack  
 - Frontend: Flutter  
-- Backend: Firebase
+
 
 ## License  
 This project is licensed under the [MIT License](LICENSE).  
